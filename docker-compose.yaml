@@ -1,0 +1,15 @@
+services:
+
+  db:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=free_lib
+      - POSTGRES_USER=mojtaba
+      - POSTGRES_PASSWORD=mojtaba7878
+    volumes:
+      - free-lib-data:/var/lib/free_lib/data/
+
+volumes:
+    free-lib-data:
