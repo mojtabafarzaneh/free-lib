@@ -7,3 +7,7 @@ type SearchQuery struct {
 	SearchMirror url.URL
 	Print        bool
 }
+
+type DownloadQuery struct {
+	Hash string `json:"hash"`
+}
