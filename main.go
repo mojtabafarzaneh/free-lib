@@ -9,7 +9,10 @@ func main() {
 	app := gin.Default()
 	//conf := config.Get()
 	search := app.Group("/search")
+	download := app.Group("/download")
 	sc := api.NewSearchControler()
+	dc := api.NewDownloadController()
+	download.POST("", dc.Download)
 	search.POST("", sc.Search)
 	app.Run()
 }
